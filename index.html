@@ -3,9 +3,13 @@
 <head>
     <title>Redirect Page</title>
     <script>
-        window.onload = function() {
-            window.location.href = "https://ea.com"; // Replace with your desired URL
-        };
+        window.addEventListener('pageshow', function(event) {
+            if (event.persisted) {
+                window.location.reload(); // Refresh the page on back navigation from bfcache
+            } else {
+                window.location.href = "https://ea.com"; // Replace with your desired URL
+            }
+        });
     </script>
 </head>
 <body>
