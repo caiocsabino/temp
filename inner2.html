@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <script>
+      var userAgent = navigator.userAgent;
+
+      // Check if the user agent contains "Android"
+      if (userAgent.match(/Android/i)) {
+        document.head.innerHTML = '<meta http-equiv = "refresh" content = "0; url = https://www.ea.com/games/simcity/simcity-buildit/deep-link/?webshopclaim" />';
+      }
+      // Check if the user agent contains "iPhone" or "iPad" (for iOS)
+      else if (userAgent.match(/iPhone|iPad/i)) {
+          // Redirect to URL2 if on iOS
+          document.head.innerHTML = '<meta http-equiv = "refresh" content = "0; url = https://simcitybuildit.sng.link/C2dh5/webshopclaim" />';
+      }
+      // If neither Android nor iOS is detected, you can handle it as needed
+      else {
+          document.head.innerHTML = '<meta http-equiv = "refresh" content = "0; url = https://www.ea.com/games/simcity/simcity-buildit" />';
+      }
+    </script>
+  </head>
+</html>
