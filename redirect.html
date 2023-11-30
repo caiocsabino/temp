@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Page</title>
+</head>
+<body>
+    <script>
+        // Check the user agent to determine the platform
+        var userAgent = navigator.userAgent;
+
+        // Check if the user agent contains "Android"
+        if (userAgent.match(/Android/i)) {
+            // Redirect to URL1 if on Android
+            window.location.href = "https://www.ea.com/games/simcity/simcity-buildit/deep-link/?webshopclaim";
+        }
+        // Check if the user agent contains "iPhone" or "iPad" (for iOS)
+        else if (userAgent.match(/iPhone|iPad/i)) {
+            // Redirect to URL2 if on iOS
+            window.location.href = "https://simcitybuildit.sng.link/C2dh5/webshopclaim";
+        }
+        // If neither Android nor iOS is detected, you can handle it as needed
+        else {
+            document.body.innerHTML = "Unsupported platform.";
+        }
+    </script>
+</body>
+</html>
