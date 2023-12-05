@@ -3,6 +3,8 @@
     <script>
       var userAgent = navigator.userAgent;
 
+      alert("user agent " + user.userAgent);
+
       // Check if the user agent contains "Android"
       if (userAgent.match(/Android/i)) {
         document.head.innerHTML = '<meta http-equiv = "refresh" content = "0; url = simcitybuildit://webshopclaim" />';
@@ -14,6 +16,7 @@
       }
       // If neither Android nor iOS is detected, you can handle it as needed
       else {
+
           document.head.innerHTML = '<meta http-equiv = "refresh" content = "0; url = https://www.ea.com/games/simcity/simcity-buildit" />';
       }
     </script>
